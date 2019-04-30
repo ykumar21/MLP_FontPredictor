@@ -17,6 +17,15 @@ window.onload = function() {
   let label_roboto= document.getElementById('selected'); // Label for roboto
 
   bg.addEventListener('click', function() {
+
+  	 // On click select random R,G and B values
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+
+    // Change background to random color
+    bg.style.backgroundColor =  'rgb(' + r + ',' + g + ',' + b + ')';
+
     // Display font labels based on selection
     let prediction = fontPredictor(r,g,b);
 
@@ -31,13 +40,7 @@ window.onload = function() {
         label_montserrat.style.display = "block";
     }
 
-    // On click select random R,G and B values
-    let r = Math.floor(Math.random() * 256);
-    let g = Math.floor(Math.random() * 256);
-    let b = Math.floor(Math.random() * 256);
-
-    // Change background to random color
-    bg.style.backgroundColor =  'rgb(' + r + ',' + g + ',' + b + ')';
+  
 
   });
 
